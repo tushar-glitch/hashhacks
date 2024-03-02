@@ -39,13 +39,14 @@ const login = async (req, res) => {
     }
     const token = jwt.sign(
       { userId: emailPresent._id, isAdmin: emailPresent.isAdmin },
-      process.env.JWT_SECRET,
+      process.env.JWT_KEY,
       {
         expiresIn: "2 days",
       }
     );
     return res.status(201).json({ msg: "User logged in successfully", token});
   } catch (error) {
+    console.log(error);
     res.status(500).send("Unable to login user");
   }
 };
