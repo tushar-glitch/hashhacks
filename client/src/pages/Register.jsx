@@ -54,7 +54,6 @@ function Register() {
           lastname,
           email,
           password,
-          pic: file,
         }),
         {
           pending: "Registering user...",
