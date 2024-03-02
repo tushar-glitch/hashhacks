@@ -29,6 +29,43 @@
   flex: 1;
 }
 
+
+.floating-image {
+  animation: floatAnimation 3s ease-in-out infinite; /* Change duration and timing function as needed */
+}
+
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px); /* Adjust the distance it floats up */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+/* Optional: Customize cursor blinking animation */
+.typing-text::after {
+  content: '|'; /* Cursor symbol */
+  animation: blinkCursor 19.7s infinite; /* Customize blinking speed as needed */
+}
+
+@keyframes blinkCursor {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
 .hero-img img {
   width: auto;height: 560px;
   border-radius:10px;
@@ -61,7 +98,9 @@ background: linear-gradient(152deg, rgba(91,193,233,1) 0%, rgba(43,46,73,1) 100%
     
 }
 .hero-content .started:hover{
-    cursor: pointer;}
+    cursor: pointer;
+    background: rgb(89,190,230);
+  }
 @media screen and (max-width: 770px) {
   .hero {
     height: auto;
