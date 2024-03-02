@@ -69,7 +69,7 @@ const Footer = () => {
             target="_blank"
             rel="noreferrer"
           >
-            Tushar Chauhan
+            Team Coded Minds
           </a>{" "}
           © {new Date().getFullYear()}
         </div>

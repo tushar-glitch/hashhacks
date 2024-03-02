@@ -18,11 +18,11 @@ const Contact = () => {
 
   return (
     <section
-      className="register-section flex-center"
+      className="register-section flex-center" style={{backgroundColor: '#A1C5E2'}}
       id="contact"
     >
       <div className="contact-container flex-center contact">
-        <h2 className="form-heading">Contact Us</h2>
+        <h2 className="form-heading "style={{fontFamily: 'DM Sans', fontWeight: 700, fontSize: '40px',}}>Contact Us</h2>
         <form
           method="POST"
           action={`https://formspree.io/f/${process.env.REACT_FORMIK_SECRET}`}
@@ -59,7 +59,7 @@ const Contact = () => {
             type="submit"
             className="btn form-btn"
           >
-            send
+            Send
           </button>
         </form>
       </div>
