@@ -1,4 +1,4 @@
-@import url(app.css);
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
 
 .register-section {
   width: 100%;
@@ -19,7 +19,9 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  margin-left: 100px;
 }
 
 .form-input,

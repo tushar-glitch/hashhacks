@@ -40,6 +40,7 @@ function Login() {
       } else if (password.length < 5) {
         return toast.error("Password must be at least 5 characters long");
       }
+      setLoading(true);
       const details = {
         email: email,
         password: password
@@ -65,11 +66,14 @@ function Login() {
       //   dispatch(setUserInfo(jwt_decode(res.data.token).userId));
       //   getUser(jwt_decode(res.data.token).userId);
       // })
+      
+      setLoading(false);
       console.log(data);
       localStorage.setItem("token", data.token);
       dispatch(setUserInfo(jwt_decode(data.token).userId));
       getUser(jwt_decode(data.token).userId);
     } catch (error) {
+        setLoading(false);
       return error;
     }
   };
