@@ -2,7 +2,7 @@
 
 .hero {
   display: flex;
-  height: 90vh;
+  height: 85vh;
   width: 80%;
   margin: 0 auto;
   align-items: center;
@@ -18,18 +18,29 @@
 }
 
 .hero-content h1 {
-  font-size: 2.5rem;
+  font-size: 3.3rem;
 }
+.hero-content p {
+    font-size: 1.2rem;
+  }
+  
 
 .hero-img {
   flex: 1;
 }
 
 .hero-img img {
-  width: 100%;
+  width: auto;height: 560px;
   border-radius:10px;
 }
-
+.boot_col{
+    position: relative;
+    top: -100px;
+    z-index: -1;
+    height: 200px;
+    background-color: #A1C5E2;
+    border-radius: 0 0 50px  50px;
+}
 .about {
   display: flex;
   margin: 0 auto;
@@ -37,7 +48,20 @@
   gap: 2rem; 
   justify-content: space-between;
 }
-
+.hero-content .started{
+    width: 150px;
+    height: 50px;
+font-size: 1.3rem;
+margin-top: 20px;
+    border-radius: 25px;
+    border: none;
+color: white;
+background: rgb(91,193,233);
+background: linear-gradient(152deg, rgba(91,193,233,1) 0%, rgba(43,46,73,1) 100%);
+    
+}
+.hero-content .started:hover{
+    cursor: pointer;}
 @media screen and (max-width: 770px) {
   .hero {
     height: auto;
