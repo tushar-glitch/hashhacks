@@ -15,6 +15,7 @@ axios.defaults.baseURL = process.env.REACT_APP_SERVER_DOMAIN;
 
 function Login() {
   const erremail=false;
+  const [loading, setLoading]= useState(false);
   const dispatch = useDispatch();
   const [formDetails, setFormDetails] = useState({
     email: "",
@@ -194,8 +195,8 @@ function Login() {
               </Link> */}
             </div>
             <div className="sub_btn_log">
-              <button type="submit" onClick={formSubmit}>
-                 <>Login</>
+              <button type="submit" disabled={loading} onClick={formSubmit}>
+              {loading ? <>Verifying..</> : <>Login</>}
               </button>
             </div>
             <div className="bott_text">
