@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Inter&display=swap');
+.home_services{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    
+}
+.home_services .card_1{
+    width: 340px;
+    height: 580px;
+    border-radius: 25px;
+    background-color: #ffffff;
+    box-shadow: 10px 8px 20px 0px rgba(0, 0, 0, 0.20);
+    margin: 40px 25px;
+}
+.home_services .card_1 .serv_img{
+    height: 250px;
+    background: radial-gradient(96.65% 96.65% at 50% 3.35%, #035B83 0%, #273055 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:25px 25px 0 0;
+}
+.home_services .card_1 .serv_img img{
+    width: auto;
+    height: 170px;
+}
+.home_services .card_1 .serv_cont{
+    margin: 2px 20px 20px 20px;
+    width: auto;
+    height: 200px;
+    word-wrap: break-word;
+    text-align: justify;
+    line-height: 22px;
+    font-family: "Inter";
+}
+.home_services .card_1 .serv_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home_services .card_1 .serv_btn button[type="submit"]{
+    background-color: #00B3BF;
+    border: none;
+    width: 125px;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 20px;
+    color:#ffffff;
+}
+.home_services .cd{
+    transition: 400ms;
+}
+.home_services .cd:hover{
+    transform: scale(1.05, 1.05);
+}
+.home_services:hover > .cd:not(:hover){
+    /* filter: blur(2px); */
+  transform: scale(0.98, 0.98);
+}
+.home_services .serv_head{
+    font-family: DM Sans;
+    letter-spacing: 1px;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 10px;
+    color: #354C6A;
+    font-weight: 600;
+}
+
+.home_service_section .service_head{
+    font-family: DM Sans;
+    letter-spacing: 1px;
+    font-size: 40px;
+  
+    font-weight: 700;
+    color: var(--bold-text-color);
+    text-align: center;
+}

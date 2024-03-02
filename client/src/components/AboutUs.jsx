@@ -3,9 +3,9 @@ import image from "../images/about.avif";
 
 const AboutUs = () => {
   return (
-    <>
-      <section className="container">
-        <h2 className="page-heading about-heading">About Us</h2>
+    <div className="about_sec"style={{backgroundColor: '#A1C5E2'}}>
+      <section className="container" style={{padding:'40px 0'}}>
+        <h2 className="page-heading about-heading" style={{fontFamily: 'DM Sans', fontWeight: 700, fontSize: '40px', paddingTop:'30px'}}>About Us</h2>
         <div className="about">
           <div className="hero-img">
             <img
@@ -21,7 +21,7 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 
