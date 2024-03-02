@@ -61,6 +61,6 @@ const schema = mongoose.Schema(
   }
 );
 
-const User = mongoose.model("User", schema);
+const User = mongoose.model("Swastika-user", schema);
 
 module.exports = User;

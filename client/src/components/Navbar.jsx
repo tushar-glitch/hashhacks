@@ -8,6 +8,8 @@ import { FiMenu } from "react-icons/fi";
 import { RxCross1 } from "react-icons/rx";
 import jwt_decode from "jwt-decode";
 
+import logo from "../images/logo.svg";
+
 const Navbar = () => {
   const [iconActive, setIconActive] = useState(false);
   const dispatch = useDispatch();
@@ -28,9 +30,9 @@ const Navbar = () => {
   return (
     <header>
       <nav className={iconActive ? "nav-active" : ""}>
-        <h2 className="nav-logo">
-          <NavLink to={"/"}>CareClique</NavLink>
-        </h2>
+        <div className="nav-logo">
+          <NavLink to={"/"}><img src={logo} alt="Swastika"/></NavLink>
+        </div>
         <ul className="nav-links">
           <li>
             <NavLink to={"/"}>Home</NavLink>
@@ -38,11 +40,7 @@ const Navbar = () => {
           <li>
             <NavLink to={"/doctors"}>Doctors</NavLink>
           </li>
-          {token && user.isAdmin && (
-            <li>
-              <NavLink to={"/dashboard/users"}>Dashboard</NavLink>
-            </li>
-          )}
+          
           {token && !user.isAdmin && (
             <>
               <li>
@@ -51,15 +49,11 @@ const Navbar = () => {
               <li>
                 <NavLink to={"/notifications"}>Notifications</NavLink>
               </li>
-              <li>
-                <NavLink to={"/applyfordoctor"}>Apply for doctor</NavLink>
-              </li>
+              
               <li>
                 <HashLink to={"/#contact"}>Contact Us</HashLink>
               </li>
-              <li>
-                <NavLink to={"/profile"}>Profile</NavLink>
-              </li>
+              
             </>
           )}
           {!token ? (

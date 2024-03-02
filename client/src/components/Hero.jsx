@@ -1,17 +1,24 @@
 import React from "react";
-import image from "../images/main.jpg";
+import image from "../images/main.svg";
+import { useNavigate } from "react-router-dom";
 import "../styles/hero.css";
 
 const Hero = () => {
-  return (
+    const  navigate = useNavigate();
+    function reg(){
+        navigate("/register");
+    }
+  return (<>
     <section className="hero">
       <div className="hero-content">
         <h1>
-        Empowering Wellness, <br />
-        Elevating Lives
+        Free & Quick <br />
+        Consultations
         </h1>
-        <p>Begin Your Wellness Journey at Your Health Hub, Where Your Well-being Is Our Utmost Priority. Join Us as We Guide You Towards Optimal Health and Comprehensive Care.
+        <p>Completely Free, zero hidden costs! Quick check up through AI
         </p>
+
+        <button className="started" onClick={reg}>Get Started</button>
       </div>
       <div className="hero-img">
         <img
@@ -20,6 +27,8 @@ const Hero = () => {
         />
       </div>
     </section>
+    <section className="boot_col">
+        </section></>
   );
 };
 
