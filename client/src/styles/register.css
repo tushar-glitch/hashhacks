@@ -1,80 +1,164 @@
-@import url(app.css);
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
 
-.register-section {
-  width: 100%;
+  .mainbody{
+    display: flex;
   height: 100vh;
-}
-
-.register-container {
-  flex-direction: column;
-  gap: 2rem;
-  width: 30%;
-}
-
-.form-heading {
-  font-size: 2rem;
-}
-
-.register-form {
   width: 100%;
+justify-content: space-between;
+background-color: #D4E9F1;
+  }
+  .left_side .left_cont{
+    font-family: 'Inter', sans-serif;
+    margin-top: 70px;
+    font-size: 30px;
+    color: #2E3854;
+  }
+  #welcome{
+    font-size: 60px!important;
+  }
+.left_side{
+  width: 50%;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  margin-left: 100px;
+}
+.left_side .left_logo img{
+  width: 550px;
+  height: auto;
 }
 
-.form-input,
-textarea,
-select {
-  font-size: 1rem;
-  background-color: rgb(234, 234, 234);
-  padding: 0.8rem 1.5rem;
-  border: none;
-  border-radius: 5px;
-  font-family: var(--font-family);
+.right_side{
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+  .container{
+    border-radius: 18px;
+background: rgb(255, 255, 255);
+box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.25);
 
-.form-input:focus,
-textarea:focus,
-select:focus {
-  outline: none;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.login-link {
-  color: var(--darker-blue);
-}
-
-@media (max-width: 1184px) {
-  .register-container {
-    width: 30%;
+  border: 2px solid rgba(255, 255, 255, 0.359);
+    min-width: 400px;
+    width: auto;
+    padding: 25px 30px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
   }
-}
-
-@media (max-width: 1120px) {
-  .register-container {
-    width: 35%;
+  .container .head_log{
+    color: #000000;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 10px;
   }
-}
-
-@media (max-width: 746px) {
-  .register-container {
-    width: 40%;
+  /* label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: white;
+  } */
+  
+  .email_inp{
+    width: 300px;
+    padding: 10px;
+    margin: 5px 0 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    /* background-color: white; */
+    
   }
-}
-
-@media (max-width: 600px) {
-  .register-container {
-    width: 60%;
+  .sub_btn_log{
+     display: flex;
+    justify-content: center;
+    align-items: center;
   }
-}
-
-@media (max-width: 408px) {
-  .register-container {
-    width: 70%;
+  
+  .container button[type="submit"]{
+   
+    font-family: 'Inter', sans-serif;
+    margin: 10px 16px;
+    width: 100%;
+    padding: 12px 40px;
+    background: #2E3854;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 10px;
+    /* cursor: pointer;
+    transition: all 0.3s ease; */
+    border: 1px solid black;
   }
+  .container button[type="submit"]:hover{
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0px;
+    background: #2F6BE0;
+  }
+  .container button:disabled{
+    opacity: 0.6;
+  }
+  .container button:disabled:hover{
+    cursor: not-allowed;
+  }
+  .ent{
+    margin-top: 10px;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    font-family: 'Inter', sans-serif;
+  }
+.otp-input{
+    margin: 10px 10px 20px 0;
+}
+.otp-num{
+  font-size: 21px;
+  font-weight: 600;
+}
+#otpsb{
+  margin-left: 0;
+  /* width: 100%; */
+}
+.forgot_text{
+  text-align: right;
+  margin:0 16px 10px 0;
+}
+.forgot_text #fglink{
+  font-family: 'Inter', sans-serif;
+  color: #000000;
+  text-decoration: none;
+}
+.bott_text{
+  margin: 5px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-family: 'Inter', sans-serif;
+}
+.bott_text p{
+  margin-bottom: 5px;
+}
+.bott_text #bottnav{
+  font-size: 18px;
+  color: #000000;
+  font-weight: 600;
+
+}
+.bott_text #bottnav:hover{
+  font-weight: 700;
+  color: #000000;
+}
+.black-border {
+  border-color: rgb(0, 0, 0) !important;
+}
+.red-border {
+  border-color: red !important;
 }
