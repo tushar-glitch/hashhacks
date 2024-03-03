@@ -23,7 +23,7 @@ const Services = () => {
             
           </div>
           <div className="serv_cont">
-          A comprehensive inquiry form service is provided, enabling users to effortlessly gather information about all the required documents for completion. Users can fill out the form to receive detailed information on the documents necessary for their specific needs.
+          Access a network of experienced and compassionate doctors offering comprehensive medical consultations. From routine check-ups to specialized treatments, receive personalized care and guidance tailored to your unique health needs.
           </div>
           <div className="serv_btn">
             <Link to="/doctors" ><button type="submit">Consult Now</button></Link>
@@ -37,7 +37,7 @@ const Services = () => {
           Quick AI Check up
           </div>
           <div className="serv_cont">
-          An AI-powered chat service is available, allowing users to ask questions related to their document search queries. This service assists users by addressing specific issues they encounter while searching through documents, providing real-time help and guidance.
+          Utilize cutting-edge AI technology to perform a rapid symptom assessment. Our intelligent system analyzes your reported symptoms and provides instant feedback, suggesting potential conditions and recommending suitable medications or further medical attention.
           </div>
           <div className="serv_btn">
             <Link to="/checkup"><button type="submit">Check Up</button></Link>
@@ -51,7 +51,7 @@ const Services = () => {
             Appointment
           </div>
           <div className="serv_cont">
-          The service offers users the opportunity to test the verification of their documents before officially submitting them to the final portal. This means users can ensure the accuracy and suitability of their documents through a trial process before making the final submission.
+          Streamline your healthcare journey with our user-friendly appointment booking system. Browse through available slots for your preferred doctors, select a convenient time that fits your schedule, and confirm your booking with ease. Say goodbye to long waiting times and book your appointments hassle-free.
           </div>
           <div className="serv_btn">
           <Link to="/appointments">
