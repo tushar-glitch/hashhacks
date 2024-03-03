@@ -15,6 +15,7 @@ const getallappointments = async (req, res) => {
       .populate("userId");
     return res.send(appointments);
   } catch (error) {
+    console.log(error);
     res.status(500).send("Unable to get apponintments");
   }
 };
@@ -27,7 +28,7 @@ const bookappointment = async (req, res) => {
       doctorId: req.body.doctorId,
       userId: req.locals,
     });
-
+    console.log('fdsa');
     const usernotification = Notification({
       userId: req.locals,
       content: `You booked an appointment with Dr. ${req.body.doctorname} for ${req.body.date} ${req.body.time}`,
