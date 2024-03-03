@@ -53,7 +53,7 @@ function Register() {
       // }
 
       await toast.promise(
-        axios.post(`${process.env.REACT_APP_SERVER_DOMAIN}user/register`, {
+        axios.post(`${process.env.REACT_APP_SERVER_DOMAIN}/user/register`, {
           firstname,
           lastname,
           email,
