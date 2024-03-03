@@ -9,6 +9,7 @@ import Loading from "./components/Loading";
 
 const Home = lazy(() => import("./pages/Home"));
 const Appointments = lazy(() => import("./pages/Appointments"));
+const Quickcheckup = lazy(() => import("./pages/Quickcheckup"));
 const Doctors = lazy(() => import("./pages/Doctors"));
 const Notifications = lazy(() => import("./pages/Notifications"));
 
@@ -53,6 +54,14 @@ function App() {
             element={
               <Protected>
                 <Notifications />
+              </Protected>
+            }
+          />
+          <Route
+            path="/checkup"
+            element={
+              <Protected>
+                <Quickcheckup/>
               </Protected>
             }
           />

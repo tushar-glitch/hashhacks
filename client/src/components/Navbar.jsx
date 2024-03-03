@@ -51,7 +51,7 @@ const Navbar = () => {
               </li>
               
               <li>
-                <HashLink to={"/contact"}>Quick Checkup</HashLink>
+                <HashLink to={"/checkup"}>Quick Checkup</HashLink>
               </li>
               
             </>
