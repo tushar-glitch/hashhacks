@@ -41,7 +41,7 @@ const Navbar = () => {
             <NavLink to={"/doctors"}>Doctors</NavLink>
           </li>
           
-          {token && !user.isAdmin && (
+          {token && (
             <>
               <li>
                 <NavLink to={"/appointments"}>Appointments</NavLink>
