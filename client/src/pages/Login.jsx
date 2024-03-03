@@ -47,7 +47,7 @@ function Login() {
         password: password
       }
       const { data } = await toast.promise(
-        axios.post(`${process.env.REACT_APP_SERVER_DOMAIN}/user/login`, {
+        axios.post(`${process.env.REACT_APP_SERVER_DOMAIN}user/login`, {
           email,
           password,
         }),
@@ -81,7 +81,7 @@ function Login() {
 
   const getUser = async (id) => {
     try {
-      const temp = await fetchData(`${process.env.REACT_APP_SERVER_DOMAIN}/user/getuser/${id}`);
+      const temp = await fetchData(`${process.env.REACT_APP_SERVER_DOMAIN}user/getuser/${id}`);
       dispatch(setUserInfo(temp));
       return navigate("/");
     } catch (error) {
@@ -133,7 +133,8 @@ function Login() {
                 // id="standard-required"
                 label="Email"
                 variant="outlined"
-                type="name"
+                type="email"
+                name="email"
                 //   error={errpass}
                 //   helperText={errpass ? "Your password is weak" : ""}
             value={formDetails.email}
@@ -178,6 +179,7 @@ function Login() {
                 label="Password"
                 variant="outlined"
                 type="password"
+                name="password"
                 //   error={errpass}
                 //   helperText={errpass ? "Your password is weak" : ""}
                 value={formDetails.password}

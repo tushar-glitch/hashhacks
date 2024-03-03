@@ -3,11 +3,15 @@ import { NavLink, useNavigate } from "react-router-dom";
 import "../styles/register.css";
 import axios from "axios";
 import toast from "react-hot-toast";
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
+import LOG from "../images/logo.svg"
 
 axios.defaults.baseURL = process.env.REACT_APP_SERVER_DOMAIN;
 
 function Register() {
-  const [file, setFile] = useState("");
+  // const [file, setFile] = useState("");
+  
   const [loading, setLoading] = useState(false);
   const [formDetails, setFormDetails] = useState({
     firstname: "",
@@ -33,7 +37,7 @@ function Register() {
 
       // if (loading) return;
       // if (file === "") return;
-
+      setLoading(true);
       const { firstname, lastname, email, password, confpassword } =
         formDetails;
       // if (!firstname || !lastname || !email || !password || !confpassword) {
@@ -49,7 +53,7 @@ function Register() {
       // }
 
       await toast.promise(
-        axios.post(`${process.env.REACT_APP_SERVER_DOMAIN}/user/register`, {
+        axios.post(`${process.env.REACT_APP_SERVER_DOMAIN}user/register`, {
           firstname,
           lastname,
           email,
@@ -62,79 +66,231 @@ function Register() {
           loading: "Registering user...",
         }
       );
+      setLoading(false);
       return navigate("/login");
-    } catch (error) {}
+    } catch (error) {setLoading(false);}
   };
 
   return (
-    <section className="register-section flex-center">
-      <div className="register-container flex-center">
-        <h2 className="form-heading">Sign Up</h2>
-        <form
-          onSubmit={formSubmit}
-          className="register-form"
-        >
-          <input
-            type="text"
-            name="firstname"
-            className="form-input"
-            placeholder="Enter your first name"
-            value={formDetails.firstname}
+  
+<div className="fullsc">
+      
+      <div className="l1_mainbody">
+      <div className="l1_left_side">
+          <div className="l1_left_logo">
+            <img src={LOG} alt="Swastika"/>
+          </div>
+          <div className="l1_left_cont">
+          <span id="welcome">Welcome </span> to the Swastika portal
+          </div>
+        </div>
+        <div className="l1_right_side">
+        <div className="l1_container">
+          <div className="head_log">
+            Sign up
+          </div>
+              <Box
+                component="form"
+                sx={{
+                  "& > :not(style)": {
+                    m: 2,
+                    width: "40ch",
+                    "@media (max-width: 410px)": {
+                      width: "30ch",
+                    },
+                    "@media (max-width: 338px)": {
+                      width: "28ch",
+                    },
+                    "@media (max-width: 320px)": {
+                      width: "26ch",
+                    },
+                    "@media (max-width: 300px)": {
+                      width: "23ch",
+                    },
+                  },
+                }}
+                noValidate
+                autoComplete="off"
+                className="input"
+              >
+                <TextField
+                  required
+                  // id="standard-required"
+                  label="First Name"
+                  variant="outlined"
+                  type="name"
+                  name="firstname"
+                  // error={erremail}
+                  // helperText={erremail ? "Enter Correct Email" : ""}
+                  value={formDetails.firstname}
             onChange={inputChange}
-          />
-          <input
-            type="text"
-            name="lastname"
-            className="form-input"
-            placeholder="Enter your last name"
-            value={formDetails.lastname}
+                  
+                />
+              </Box>
+              <Box
+                component="form"
+                sx={{
+                  "& > :not(style)": {
+                    m: 2,
+                    width: "40ch",
+                    "@media (max-width: 410px)": {
+                      width: "30ch",
+                    },
+                    "@media (max-width: 338px)": {
+                      width: "28ch",
+                    },
+                    "@media (max-width: 320px)": {
+                      width: "26ch",
+                    },
+                    "@media (max-width: 300px)": {
+                      width: "23ch",
+                    },
+                  },
+                }}
+                noValidate
+                autoComplete="off"
+                className="input"
+              >
+                <TextField
+                  required
+                  // id="standard-required"
+                  label="Last Name"
+                  variant="outlined"
+                  type="name"
+                  name="lastname"
+                  // error={erremail}
+                  // helperText={erremail ? "Enter Correct Email" : ""}
+                  value={formDetails.lastname}
             onChange={inputChange}
-          />
-          <input
-            type="email"
-            name="email"
-            className="form-input"
-            placeholder="Enter your email"
-            value={formDetails.email}
+                  
+                />
+              </Box>
+              <Box
+                component="form"
+                sx={{
+                  "& > :not(style)": {
+                    m: 2,
+                    width: "40ch",
+                    "@media (max-width: 410px)": {
+                      width: "30ch",
+                    },
+                    "@media (max-width: 338px)": {
+                      width: "28ch",
+                    },
+                    "@media (max-width: 320px)": {
+                      width: "26ch",
+                    },
+                    "@media (max-width: 300px)": {
+                      width: "23ch",
+                    },
+                  },
+                }}
+                noValidate
+                autoComplete="off"
+                className="input"
+              >
+                <TextField
+                  required
+                  // id="standard-required"
+                  label="Email"
+                  variant="outlined"
+                  type="email"
+                  name="email"
+                  value={formDetails.email}
             onChange={inputChange}
-          />
-          <input
-            type="password"
-            name="password"
-            className="form-input"
-            placeholder="Enter your password"
-            value={formDetails.password}
+                />
+              </Box>
+              <Box
+                component="form"
+                sx={{
+                  "& > :not(style)": {
+                    m: 2,
+                    width: "40ch",
+                    "@media (max-width: 410px)": {
+                      width: "30ch",
+                    },
+                    "@media (max-width: 338px)": {
+                      width: "28ch",
+                    },
+                    "@media (max-width: 320px)": {
+                      width: "26ch",
+                    },
+                    "@media (max-width: 300px)": {
+                      width: "23ch",
+                    },
+                  },
+                }}
+                noValidate
+                autoComplete="off"
+                className="input"
+              >
+                <TextField
+                  required
+                  // id="standard-required"
+                  label="Create Password"
+                  variant="outlined"
+                  type="password"
+                  name="password"
+                  value={formDetails.password}
             onChange={inputChange}
-          />
-          <input
-            type="password"
-            name="confpassword"
-            className="form-input"
-            placeholder="Confirm your password"
-            value={formDetails.confpassword}
+                  
+                />
+              </Box>
+              <Box
+                component="form"
+                sx={{
+                  "& > :not(style)": {
+                    m: 2,
+                    width: "40ch",
+                    "@media (max-width: 410px)": {
+                      width: "30ch",
+                    },
+                    "@media (max-width: 338px)": {
+                      width: "28ch",
+                    },
+                    "@media (max-width: 320px)": {
+                      width: "26ch",
+                    },
+                    "@media (max-width: 300px)": {
+                      width: "23ch",
+                    },
+                  },
+                }}
+                noValidate
+                autoComplete="off"
+                className="input"
+              >
+                <TextField
+                  required
+                  // id="standard-required"
+                  label="Confirm Password"
+                  variant="outlined"
+                  type="password"
+                  name="confpassword"
+                  value={formDetails.confpassword}
             onChange={inputChange}
-          />
-          <button
-            type="submit"
-            className="btn form-btn"
-            onClick={formSubmit}
-            // disabled={loading ? true : false}
-          >
-            sign up
-          </button>
-        </form>
-        <p>
-          Already a user?{" "}
-          <NavLink
-            className="login-link"
-            to={"/login"}
-          >
-            Log in
-          </NavLink>
-        </p>
+                  
+                />
+              </Box>
+              <div className="sub_btn_log">
+
+              <button type="submit" disabled={loading} onClick={formSubmit}>
+                {loading ? <>Processing</> : <>Register</>}
+              </button>
+              </div>
+              <div className="bott_text">
+                <p>Already registered?</p>
+                <NavLink to="/login" id="bottnav">Login</NavLink>
+              </div>
+            
+        </div>
+        </div>
       </div>
-    </section>
+    </div>
+  
+
   );
 }
 
 export default Register;
+
